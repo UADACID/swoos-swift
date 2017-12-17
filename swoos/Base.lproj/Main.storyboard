@@ -118,6 +118,9 @@
                                         <state key="normal" title="MENS">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onMenPress:" destination="WPC-Ff-pcV" eventType="touchUpInside" id="b91-8x-Hch"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V0z-RC-VA2" customClass="BorderButton" customModule="swoos" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="70" width="343" height="50"/>
@@ -129,6 +132,9 @@
                                         <state key="normal" title="WOMENS">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onWomenPress:" destination="WPC-Ff-pcV" eventType="touchUpInside" id="Uf2-5J-uQi"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BVi-Ri-OJQ" customClass="BorderButton" customModule="swoos" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="140" width="343" height="50"/>
@@ -140,6 +146,9 @@
                                         <state key="normal" title="CO-ED">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onCoPress:" destination="WPC-Ff-pcV" eventType="touchUpInside" id="IlB-j2-fvF"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -161,7 +170,7 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9u-ma-V90" customClass="BorderButton" customModule="swoos" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9u-ma-V90" customClass="BorderButton" customModule="swoos" customModuleProvider="target">
                                 <rect key="frame" x="16" y="601" width="343" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.50350492290000004" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -208,6 +217,7 @@
                         <viewLayoutGuide key="safeArea" id="LTe-ay-ban"/>
                     </view>
                     <connections>
+                        <outlet property="nextButton" destination="O9u-ma-V90" id="eDk-1R-nlG"/>
                         <segue destination="lsf-rb-8JK" kind="show" identifier="skillVCSegue" id="HfT-tT-nhs"/>
                     </connections>
                 </viewController>

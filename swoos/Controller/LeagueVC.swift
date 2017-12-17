@@ -9,11 +9,32 @@
 import UIKit
 
 class LeagueVC: UIViewController {
+    
+    var player: Player!
 
+    @IBOutlet weak var nextButton: BorderButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        player = Player()
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func onMenPress(_ sender: Any) {
+        selectLeague(leagueType: "Men")
+    }
+    
+    @IBAction func onWomenPress(_ sender: Any) {
+        selectLeague(leagueType: "Women")
+    }
+    
+    @IBAction func onCoPress(_ sender: Any) {
+        selectLeague(leagueType: "Coed")
+    }
+    
+    func selectLeague(leagueType: String){
+        player.desiredLeague = leagueType
+        nextButton.isEnabled = true
     }
     
     @IBAction func onPressNext(_ sender: Any) {
